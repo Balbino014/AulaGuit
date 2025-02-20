@@ -1,0 +1,44 @@
+/*
+Autor:Diogo Alves
+Nome do programa: cruzamento
+Data:20/02/2025
+*/
+#define pinLedVermelhoA 13
+#define tempoLigadoVermelho 5000
+#define pinLedAmareloA 12
+#define tempoLigadoAmarelo 2000
+#define pinLedVerdeA 11
+#define tempoLigadoVerde 3000
+#define pinLedVermelhoB 4
+#define pinLedAmareloB 3
+#define pinLedVerdeB 2
+
+void setup ()
+{
+  pinMode (pinLedVermelhoA, OUTPUT);
+  pinMode (pinLedVermelhoB, OUTPUT);
+  pinMode (pinLedVerdeA, OUTPUT);
+  pinMode (pinLedVerdeB, OUTPUT);
+  pinMode (pinLedAmareloA, OUTPUT);
+  pinMode (pinLedAmareloB, OUTPUT);
+}
+
+void loop ()
+{
+  digitalWrite (pinLedVermelhoA,HIGH); 
+  digitalWrite (pinLedVerdeB, HIGH);
+  delay(tempoLigadoVerde);
+  digitalWrite (pinLedVerdeB, LOW);
+  digitalWrite (pinLedAmareloB, HIGH);
+  delay(tempoLigadoAmarelo);
+  digitalWrite (pinLedAmareloB, LOW);
+  digitalWrite (pinLedVermelhoA, LOW);
+  digitalWrite (pinLedVermelhoB, HIGH);
+  digitalWrite (pinLedVerdeA, HIGH);
+  delay(tempoLigadoVerde);
+  digitalWrite (pinLedVerdeA, LOW);
+  digitalWrite (pinLedAmareloA, HIGH);
+  delay(tempoLigadoAmarelo);
+  digitalWrite (pinLedAmareloA, LOW);
+  digitalWrite (pinLedVermelhoB, LOW);
+}
