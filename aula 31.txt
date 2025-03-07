@@ -1,0 +1,77 @@
+/*
+Nome:Diogo Alves BAlbino
+Data:06/03/2025
+Atividade vento
+
+*/
+
+
+
+#define pinLedVermelho 9
+#define pinLedAzul 12
+#define pinLedCinza 11
+#define pinLedVerde 10
+#define pinLedLaranja 13
+#define pinLedAmarelo 8
+
+void setup()
+{
+  Serial.begin(9600);
+  
+  pinMode (pinLedAmarelo, OUTPUT);
+  pinMode (pinLedLaranja, OUTPUT);
+  pinMode (pinLedVermelho, OUTPUT);
+  pinMode (pinLedAzul, OUTPUT);
+  pinMode (pinLedCinza, OUTPUT);
+  pinMode (pinLedVerde, OUTPUT);
+
+  int escolha = 0;
+  
+  switch (escolha)
+  {
+    case 0:
+    digitalWrite(pinLedLaranja, HIGH);
+    Serial.println("ruim");
+    break;
+    
+    
+    
+    case 1:
+    digitalWrite(pinLedAzul, HIGH);
+    Serial.println("normal");
+    break;
+    
+    
+    
+    case 2:
+    digitalWrite(pinLedCinza, HIGH);
+    Serial.println("boa");
+    break;
+    
+    
+    
+    case 3:
+    digitalWrite(pinLedVerde, HIGH);
+    Serial.println("excelente");
+    break;
+  
+    
+    
+  default:
+   digitalWrite(pinLedAmarelo, HIGH);
+   Serial.println("erro");
+    break;
+  
+  
+  }
+  
+  
+  
+  
+  
+}
+
+void loop()
+{
+ 
+}

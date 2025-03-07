@@ -1,0 +1,42 @@
+/*
+Autor:Diogo Alves Balbino
+Data: 26/02/2025
+Nome do arquivo:Estrutura de decisao
+*/
+
+
+  float peso = 80;
+  float altura = 1.80;
+  float resultadoReal = 0 ;
+
+
+void setup()
+{
+  Serial.begin(9600);
+  resultadoReal = peso / sq(altura);
+  Serial.println (resultadoReal);
+    
+  if(resultadoReal >= 40){
+    Serial.println("Obesidade |||");
+    
+  }else if(resultadoReal <= 39.9 && resultadoReal > 35.0 ){
+    Serial.println("Obesidade classe ||");
+  }else if(resultadoReal <= 34.9 && resultadoReal > 30.0 ){ 
+    Serial.println("Obesidade classe |");
+  }else if(resultadoReal <= 29.9 && resultadoReal > 25.0 ){
+    Serial.println("Exesso de peso");
+  }else if(resultadoReal <= 24.9 && resultadoReal > 18.5 ){
+    Serial.println("Peso normal");
+  }else{Serial.println("Abaixo do peso");}
+    
+  
+ 
+  
+  
+  
+}
+void loop()
+{
+  
+  
+}
