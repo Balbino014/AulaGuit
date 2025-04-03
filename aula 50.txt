@@ -1,0 +1,47 @@
+#include <Arduino.h>
+
+const int pinBotao = 3;
+
+// PROTOTIPOS DAS FUNCOES
+void ligaLed(int);
+void desligaLed(int);
+void piscaLed(int, unsigned long);
+int somaDeDoisNumeros(int, int);
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{//2 -> numero do led   / 100 = tempo de espera
+  piscaLed(2, 100);
+  int resultadoDaSoma = somaDeDoisNumeros(4, 8);
+  Serial.println(resultadoDaSoma);
+}
+//pin -> pode ser led ou botao
+void ligaLed(int pin)
+{
+  digitalWrite(pin, HIGH);
+}
+
+void desligaLed(int pin)
+{
+  digitalWrite(pin, LOW);
+}
+    // pin -> led / tempo -> tempo de espera
+void piscaLed(int pin, unsigned long tempo)
+{
+  ligaLed(pin);
+  delay(tempo);
+  desligaLed(pin);
+  delay(tempo);
+}
+
+int somaDeDoisNumeros(int numeroA, int numeroB)
+{
+  int resultado = numeroA + numeroB;
+  // quando for int sempre tera return
+  return resultado;
+} 
