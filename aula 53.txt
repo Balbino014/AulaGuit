@@ -1,0 +1,44 @@
+//FEITO ATE O ESTAGIO 3
+
+
+#include <Arduino.h>
+#include <Bounce2.h>
+#include <LiquidCrystal_I2C.h>
+
+#define pinLedAmarelo 2
+#define pinLedVermelho 15
+#define pinLedVerde 4
+#define pinLedCinza 5
+
+#define pinBotao0 18
+#define pinBotao1 19
+#define pinBotao2 21
+
+Bounce botao0 = Bounce();
+Bounce botao1 = Bounce();
+Bounce botao2 = Bounce();
+
+
+void setup()
+{
+Serial.begin(9600);
+botao0.attach(pinBotao0, INPUT_PULLUP);
+botao1.attach(pinBotao1, INPUT_PULLUP);
+botao2.attach(pinBotao2, INPUT_PULLUP);
+pinMode(pinLedAmarelo, OUTPUT);
+pinMode(pinLedVermelho, OUTPUT);
+pinMode(pinLedVerde, OUTPUT);
+pinMode(pinLedCinza, OUTPUT);
+}
+
+void loop()
+{
+ botao0.update();
+ botao1.update();
+ botao2.update();
+
+ int contagem = 0;
+ contagem++;
+
+
+}
